@@ -1,6 +1,6 @@
 //
 //  ScientistController.swift
-//  HelloAR
+//  RealityLab
 //
 //  Created by DataBunker on 2022-11-27.
 //
@@ -160,4 +160,3 @@ extension SCNNode {
         pivot = SCNMatrix4MakeTranslation(0, max.y, 0)
     }
 }
-

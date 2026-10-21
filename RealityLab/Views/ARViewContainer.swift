@@ -1,6 +1,6 @@
 //
 //  ARContainerView.swift
-//  HelloAR
+//  RealityLab
 //
 //  Created by DataBunker on 2022-11-23.
 //
@@ -28,5 +28,4 @@ struct ARViewContainer: UIViewRepresentable {
     func updateUIView(_ uiView: ARView, context: Context) {}
     
 }
-
 

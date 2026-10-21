@@ -1,6 +1,6 @@
 //
 //  DetailView.swift
-//  HelloAR
+//  RealityLab
 //
 //  Created by DataBunker on 2022-11-24.
 //
@@ -83,4 +83,3 @@ struct ModelDetail_Previews: PreviewProvider {
         
     }
 }
-

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4284B8902922065C00C03742"
-               BuildableName = "HelloAR.app"
-               BlueprintName = "HelloAR"
-               ReferencedContainer = "container:HelloAR.xcodeproj">
+               BuildableName = "RealityLab.app"
+               BlueprintName = "RealityLab"
+               ReferencedContainer = "container:RealityLab.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4284B8902922065C00C03742"
-            BuildableName = "HelloAR.app"
-            BlueprintName = "HelloAR"
-            ReferencedContainer = "container:HelloAR.xcodeproj">
+            BuildableName = "RealityLab.app"
+            BlueprintName = "RealityLab"
+            ReferencedContainer = "container:RealityLab.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4284B8902922065C00C03742"
-            BuildableName = "HelloAR.app"
-            BlueprintName = "HelloAR"
-            ReferencedContainer = "container:HelloAR.xcodeproj">
+            BuildableName = "RealityLab.app"
+            BlueprintName = "RealityLab"
+            ReferencedContainer = "container:RealityLab.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

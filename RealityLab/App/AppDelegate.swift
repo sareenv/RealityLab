@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  HelloAR
+//  RealityLab
 //
 //  Created by DataBunker on 2022-11-14.
 //
@@ -46,4 +46,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

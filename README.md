@@ -1,228 +1,202 @@
-# HelloAR - Interactive AR Learning Experience 🚀
+# RealityLab - AR Learning App
 
-An immersive **Augmented Reality (AR)** educational application built with **SwiftUI** and **RealityKit/ARKit** that brings space exploration and scientific history to life through interactive 3D models and image recognition.
+RealityLab is an iOS app that uses augmented reality (AR) to help people learn. It uses 3D models and image recognition to show space objects and information about scientists.
 
-## 📱 Overview
+## Overview
 
-HelloAR is an iOS application designed to make learning engaging through AR technology. The app features two main interactive experiences:
+The app has two main features:
 
-1. **3D Model Viewer**: Place and interact with space-related 3D models (Lunar Rover, Cosmonaut Suit, etc.) in your real-world environment
-2. **Scientist Recognition Cards**: Use image tracking to recognize famous scientist cards and display their biographical information in AR
+1. **3D model viewer:** View space and science models in your surroundings.
+2. **Scientist cards:** Point the camera at a scientist card to see information about that person.
 
-## ✨ Key Features
+## Features
 
-### 🌌 Interactive 3D Models
-- **Lunar Rover**: Explore the vehicle used on Moon missions
-- **Cosmonaut Suit**: View detailed space suit models used for EVAs
-- **The HAB Module**: Examine the pressurized cargo carrier used in space missions
-- **Volcano Model**: Learn about geological formations with interactive 3D visualization
+### 3D Models
 
-### 🔬 AR Image Recognition
-- Recognizes printed cards featuring famous scientists:
-  - Marie Curie (Physics)
-  - Albert Einstein (Physics)
-  - Isaac Newton (Mathematics)
-  - Charles Darwin (Biology)
-  - Galileo Galilei (Astronomy)
-  - Ada Lovelace (Mathematics)
-  - Mary Anning (Palaeontology)
-  - Louis Pasteur (Chemistry)
-  - Nikola Tesla (Engineering)
+- **Lunar Rover:** Learn about a vehicle used on the Moon.
+- **Cosmonaut Suit:** View a space suit used by astronauts.
+- **HAB Module:** Explore a cargo module used in space missions.
+- **Volcano:** Learn about volcanoes with a 3D model.
 
-### 🎯 Core Functionality
-- **Plane Detection**: Automatically detects horizontal surfaces for model placement
-- **Tap to Place**: Simple tap gesture to position 3D models in AR space
-- **Image Tracking**: Real-time recognition of reference images with biographical overlays
-- **Search Capability**: Quickly find specific models through the search interface
-- **Async Image Loading**: Smooth loading of preview images with progress indicators
+### Scientist Cards
 
-## 🏗️ Architecture
+The app can recognize cards with pictures of these scientists:
 
-### Technology Stack
-- **SwiftUI**: Modern declarative UI framework
-- **RealityKit**: High-performance 3D rendering and AR experiences
-- **ARKit**: Apple's augmented reality framework
-- **SceneKit**: 3D graphics rendering (for scientist card view)
-- **Combine**: Reactive programming for state management
+- Marie Curie (Physics)
+- Albert Einstein (Physics)
+- Isaac Newton (Mathematics)
+- Charles Darwin (Biology)
+- Galileo Galilei (Astronomy)
+- Ada Lovelace (Mathematics)
+- Mary Anning (Palaeontology)
+- Louis Pasteur (Chemistry)
+- Nikola Tesla (Engineering)
 
-### Project Structure
-```
-HelloAR/
+### Other Features
+
+- Detects flat surfaces where you can place a model.
+- Lets you tap the screen to place a model.
+- Tracks scientist cards and shows information about each person.
+- Lets you search for models.
+- Shows loading progress while preview images load.
+
+## Technologies
+
+- **SwiftUI:** Builds the app's screens.
+- **RealityKit:** Shows 3D models and AR scenes.
+- **ARKit:** Provides AR features, such as surface and image tracking.
+- **SceneKit:** Shows 3D text in the scientist card view.
+- **Combine:** Helps manage data changes in the app.
+
+## Project Structure
+
+```text
+RealityLab/
 ├── App/
-│   ├── AppDelegate.swift              # App lifecycle and window management
-│   └── ContentView.swift              # Main navigation and model listing
-│
-├── Views/
-│   ├── ARViewContainer.swift          # RealityKit AR view wrapper
-│   └── DetailView.swift               # Model details and AR launcher
-│
-├── UIControllers/
-│   └── ScientistController.swift     # ARKit image tracking controller
-│
+│   └── AppDelegate.swift
+├── Assets.xcassets/
+│   └── scientists.arresourcegroup/
 ├── Coordinator/
-│   └── Coordinator.swift              # AR gesture handling and model placement
-│
+│   └── Coordinator.swift
 ├── Models/
-│   ├── ObjectModel.swift              # 3D object data model
-│   └── Scientist.swift                # Scientist biographical data model
-│
+│   ├── ObjectModel.swift
+│   └── Scientist.swift
 ├── Resources/
-│   ├── scientists.json                # Scientist database
-│   ├── AREntites/                     # .reality 3D model files
-│   │   ├── CosmonautSuit.reality
-│   │   ├── hab_en.reality
-│   │   └── LunarRover.reality
-│   ├── VOLCANO.usdz                   # Static USDZ model
-│   └── Assets.xcassets/               # Images and AR reference images
-│
-└── Experience.rcproject/              # Reality Composer project
+│   ├── Data/
+│   │   └── scientists.json
+│   └── Models/
+├── UIControllers/
+│   └── ScientistController.swift
+├── Views/
+│   ├── ARViewContainer.swift
+│   └── DetailView.swift
+├── ContentView.swift
+└── Experience.rcproject/
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
-### Prerequisites
-- **Xcode 13.0+**
-- **iOS 14.0+** target device
-- **ARKit-compatible device** (iPhone 6s or newer, iPad Pro, or later)
-- Physical space (1-2 meters) for AR model placement
+### Requirements
 
-### Installation
+- Xcode 13 or later
+- An iPhone or iPad that supports ARKit
+- A real device to test AR features
 
-1. **Clone the repository**
+### Install and Run
+
+1. Clone the repository:
+
    ```bash
    git clone https://github.com/sareenv/ARL-SWIFTUI-Project.git
    cd ARL-SWIFTUI-Project
    ```
 
-2. **Open the project**
+2. Open the project:
+
    ```bash
-   open HelloAR.xcodeproj
+   open RealityLab.xcodeproj
    ```
 
-3. **Configure code signing**
-   - Select the HelloAR target
-   - Choose your development team in the "Signing & Capabilities" tab
+3. In Xcode, select the **RealityLab** target. In **Signing & Capabilities**, choose your development team.
+4. Connect an ARKit-compatible iPhone or iPad, select it as the run destination, and press **Cmd + R**.
 
-4. **Build and Run**
-   - Select a physical iOS device (AR requires a real device)
-   - Press `Cmd + R` to build and run
+### Test Scientist Card Recognition
 
-### For Scientist Recognition Feature
-To test the scientist recognition feature, you'll need physical cards with images of the scientists. The app recognizes images from the `Assets.xcassets/scientists.arresourcegroup/` directory.
+Use a printed card with an image included in `Assets.xcassets/scientists.arresourcegroup/`. Point the device camera at the card.
 
-## 💡 Usage Guide
+## How to Use the App
 
-### Viewing 3D Models
-1. Launch the app and browse the model list
-2. Tap on any model card to view details
-3. Press **"Experience the Reality"** button
-4. Point your device at a flat surface (table, floor)
-5. Tap the screen to place the model
-6. Move around to view from different angles
+### View a 3D Model
 
-### Using Scientist Recognition
-1. Select **"Scientist Recognizer"** from the card models section
-2. Point your camera at a scientist reference card
-3. The app will recognize the image and display:
-   - Scientist's name
-   - Life dates
-   - Field of expertise
-   - Biographical information
+1. Open the app and browse the model list.
+2. Tap a model to see its details.
+3. Tap **Experience the Reality**.
+4. Point the device at a flat surface, such as a table or floor.
+5. Tap the screen to place the model.
+6. Move around the model to view it from different sides.
 
-## 🎨 Features in Detail
+### Use Scientist Recognition
 
-### AR Model Placement
-- Uses **ARKit plane detection** to find horizontal surfaces
-- **Raycast technology** for accurate 3D positioning
-- **Single-tap gesture** for intuitive model placement
-- Automatically removes previous models when placing new ones
+1. Choose **Scientist Recognizer** from the card models.
+2. Point the camera at a scientist card.
+3. The app shows the scientist's name, dates, field, and biography.
 
-### Image Recognition System
-- Leverages **ARImageTrackingConfiguration**
-- Real-time tracking of multiple reference images
-- Dynamic **3D text rendering** using SceneKit
-- Custom text positioning and formatting for optimal readability
+## How the AR Features Work
 
-### User Interface
-- **Searchable list** with categorized sections:
-  - Space Interactive Models
-  - Cards Interactive Models  
-  - Static Learning Models
-- **Async image loading** with placeholders
-- **Navigation-based flow** for seamless user experience
-- **Sheet presentation** for AR views
+### Place a Model
 
-## 🔧 Technical Highlights
+- ARKit detects flat surfaces.
+- A raycast helps place the model in the right position.
+- Tap the screen to place a model.
+- Placing a new model removes the previous one.
 
-### RealityKit Integration
+### Recognize an Image
+
+- The app uses `ARImageTrackingConfiguration` to track images.
+- It can track more than one reference image.
+- SceneKit displays information as 3D text.
+
+### App Interface
+
+- Search for models in a list.
+- Browse space models, card models, and other learning models.
+- View images with loading indicators.
+- Open AR views in a sheet.
+
+## Example Code
+
+### Load and Place a Model
+
 ```swift
-// Model loading and AR placement
 let modelEntity = try? ModelEntity.load(named: modelName)
 let anchorEntity = AnchorEntity(raycastResult: result)
 anchorEntity.addChild(modelEntity)
 ```
 
-### ARKit Image Tracking
+### Set Up Image Tracking
+
 ```swift
-// Configure image tracking
 let configuration = ARImageTrackingConfiguration()
 configuration.trackingImages = trackingImages
 sceneView.session.run(configuration)
 ```
 
-### SwiftUI + UIKit Bridge
-Uses `UIViewRepresentable` and `UIViewControllerRepresentable` protocols to seamlessly integrate ARKit/SceneKit views into SwiftUI.
+The app uses `UIViewRepresentable` and `UIViewControllerRepresentable` to show ARKit and SceneKit views in SwiftUI.
 
-## 📝 Code Quality Improvements
+## Limitations
 
-This project has been updated with:
-- ✅ Comprehensive inline documentation
-- ✅ Improved code organization and file structure
-- ✅ Better separation of concerns
-- ✅ Enhanced readability and maintainability
-- ✅ Clear architectural patterns
+- AR features need a device that supports ARKit.
+- The app needs permission to use the camera.
+- Good lighting helps the camera track objects.
+- Large 3D models may need a newer device.
 
-## 🐛 Known Limitations
+## Contributing
 
-- AR features require ARKit-compatible devices
-- Camera permissions must be granted
-- Adequate lighting is needed for optimal AR tracking
-- Some 3D models may be large and require good device performance
+You can help by reporting bugs, suggesting features, sending pull requests, or improving the documentation.
 
-## 🤝 Contributing
+## License
 
-Contributions are welcome! Feel free to:
-- Report bugs
-- Suggest new features
-- Submit pull requests
-- Improve documentation
+This project was made for education. Make sure you have permission to use any 3D models and images in your own projects.
 
-## 📄 License
-
-This project was created as an educational demonstration. Please ensure you have the rights to use any 3D models or images in your own implementations.
-
-## 👤 Author
+## Author
 
 **DataBunker (sareenv)**
+
 - GitHub: [@sareenv](https://github.com/sareenv)
 - Created: November 2022
 - Updated: December 2025
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
-- Apple's ARKit and RealityKit frameworks
-- Wikipedia for scientist biographical data
-- Reality Composer for 3D model management
-- SwiftUI community for inspiration
+- Apple ARKit and RealityKit
+- Wikipedia, for scientist information
+- Reality Composer, for 3D model tools
+- The SwiftUI community
 
-## 📸 Screenshots
+## Screenshots
 
-_Add screenshots of your app here showing:_
-- Main navigation view with model list
-- AR model placement in action
-- Scientist card recognition feature
-- Detail view with model information
+Add screenshots of the model list, AR model placement, scientist card recognition, and model details.
 
 ---
 
-**Built with ❤️ using Swift, SwiftUI, ARKit, and RealityKit**
+Built with Swift, SwiftUI, ARKit, and RealityKit.
