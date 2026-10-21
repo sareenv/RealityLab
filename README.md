@@ -1,3 +1,5 @@
+![RealityLab app poster](Poster.png)
+
 # RealityLab - AR Learning App
 
 RealityLab is an iOS app that uses augmented reality (AR) to help people learn. It uses 3D models and image recognition to show space objects and information about scientists.
@@ -192,10 +194,6 @@ This project was made for education. Make sure you have permission to use any 3D
 - Wikipedia, for scientist information
 - Reality Composer, for 3D model tools
 - The SwiftUI community
-
-## Poster
-
-![RealityLab app poster](Poster.png)
 
 ---
 
