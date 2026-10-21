@@ -193,9 +193,9 @@ This project was made for education. Make sure you have permission to use any 3D
 - Reality Composer, for 3D model tools
 - The SwiftUI community
 
-## Screenshots
+## Poster
 
-Add screenshots of the model list, AR model placement, scientist card recognition, and model details.
+![RealityLab app poster](Poster.png)
 
 ---
 
